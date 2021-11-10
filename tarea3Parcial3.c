@@ -54,7 +54,7 @@ int main ()
     inicializaPila(&pila);
 
     printf("Ingrese una expresion infija: ");
-    scanf("%s", &infija);
+    scanf("%s", infija);
 
     pos = -1;
 
@@ -71,9 +71,8 @@ int main ()
             {
                 pos++;
                 desapilar(&pila, &dato);
-                post[pos] = pila.datos[pila.tope];
+                post[pos] = dato;
             }
-        pila.tope--;
         }
         else if((dato >= 'A') && (dato <= 'Z') || (dato >= 'a') && (dato <= 'z'))
         {
